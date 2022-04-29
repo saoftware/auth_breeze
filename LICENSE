@@ -1,0 +1,17 @@
+AUTHENTIFICATION MULITPLE AVEC BREEZE
+
+1. Installation du projet
+	Télécharegr et installer composer : aller sur getcomposer.org
+	composer create-project --prefert-dist laravel/laravel nomProjet
+	laravel new nomProjet
+
+	Lancer le projet : php artisan serve
+
+2. Installation du package breeze => Taper les commandes suivantes les une après les autres
+	composer required laravel/breeze --dev
+	php artisan breeze:install
+	Vérifie si nodejs est installé
+		node -v
+		Ensuite taper : npm install && npm run dev
+	Taper : php artisan migrate
+

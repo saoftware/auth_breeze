@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -37,6 +39,24 @@ class AdminController extends Controller
     {
         Auth::guard('admin')->logout();
         return redirect()->route('login_form')->with('error', 'Admin logout successfully');
+    }
+
+    // Retourne la vue de création d'un compte admin
+    public function AdminRegister()
+    {
+        return view('admin.admin_register');
+    }
+
+    // Fonction de vérification des infos création de compte
+    public function AdminRegisterCreate(Request $request)
+    {
+        Admin::insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return redirect()->route('login_form')->with('error', 'Admin created successfully');
     }
     
 }

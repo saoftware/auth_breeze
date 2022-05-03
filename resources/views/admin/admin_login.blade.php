@@ -67,7 +67,7 @@
                                     </label>
                                 </div>
                                 <div class="form-group">
-                                    <a class="registration" href=" ">Créer un nouveau compte</a><br>
+                                    <a class="registration" href="{{ route('admin.register') }} ">Créer un nouveau compte</a><br>
                                     <a href=" " class="text-white">Mot de passe oublié ?</a>
                                     <button type="submit" class="btn btn-blue">Connexion</button>
                                 </div>

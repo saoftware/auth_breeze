@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Admin extends Authenticatable
+class Seller extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -17,7 +17,7 @@ class Admin extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $guarded = 'admin';
+    protected $guarded = 'seller';
     protected $fillable = [
         'name',
         'email',

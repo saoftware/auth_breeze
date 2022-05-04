@@ -232,7 +232,7 @@
                         <li><a href=" "><span><i class="fas fa-cogs"></i></span>  Password Change</a></li>
                         <li>
 
-                            <a href="{{ route('admin.logout') }}"><span><i class="fas fa-unlock-alt"></i></span> Logout</a></li>
+                            <a href="{{ route('seller.logout') }}"><span><i class="fas fa-unlock-alt"></i></span> Logout</a></li>
                     </ul>
                 </div>
             </li>
@@ -374,8 +374,8 @@
                 </div>
             @endif
 
-            <h3>Nom : {{ Auth::guard('admin')->user()->name }}</h3>
-            <h3>Email : {{ Auth::guard('admin')->user()->email }}</h3>
+            <h3>Nom : {{ Auth::guard('seller')->user()->name }}</h3>
+            <h3>Email : {{ Auth::guard('seller')->user()->email }}</h3>
 
             <!-- counter_area -->
             <section class="counter_area">

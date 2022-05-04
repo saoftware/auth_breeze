@@ -35,7 +35,7 @@ class SellerController extends Controller
     }
 
     // Fonction de déconnexion
-    public function AdminLogout()
+    public function SellerLogout()
     {
         Auth::guard('seller')->logout();
         return redirect()->route('seller_login_form')->with('error', 'Seller logout successfully');

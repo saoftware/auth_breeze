@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
-    //Retourne la page de connexion pou l'admin
+    //Retourne la page de connexion pour l'admin
     public function Index()
     {
         return view('admin.admin_login');

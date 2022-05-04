@@ -17,8 +17,8 @@ class Seller
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!Auth::guard('admin')->check()){
-            return redirect()->route('login_form')->with('error', 'Plz login fisrt');
+        if(!Auth::guard('seller')->check()){
+            return redirect()->route('seller_login_form')->with('error', 'Plz login fisrt');
         }
         return $next($request);
     }
